@@ -139,8 +139,6 @@ class _HomeViewState extends State<HomeView> {
     bool con = false;
     
     _eSenseSub = ESenseManager.connectionEvents.listen((event) {
-      print('CONNECTION event: $event');
-
       if (event.type == ConnectionType.connected) _listenToESenseEvents();
 
       setState(() {
@@ -285,7 +283,7 @@ class _HomeViewState extends State<HomeView> {
                   Icon(Icons.brightness_2),
                   Padding(
                     padding: EdgeInsets.only(left: 16.0),
-                    child: Text('Night Mode'),
+                    child: Text('Nachtmodus'),
                   )
                 ],
               ),
@@ -311,6 +309,7 @@ class _HomeViewState extends State<HomeView> {
                 icon: Icons.exit_to_app,
                 text: 'Verlassen',
                 onTap: () {
+                  dispose();
                   SystemNavigator.pop();
                 }
             ),
@@ -677,6 +676,5 @@ Widget _createDrawerItem(
 }
 
 /* TODO
-    Fehler nach beenden von Aktivität beheben '_debugLifecycleState == _StateLifecycle.ready': is not true.
     App testen, damit sie auf keinen Fall abstürzt
  */

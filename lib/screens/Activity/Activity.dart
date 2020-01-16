@@ -61,11 +61,6 @@ class _ActivityViewState extends State<ActivityView> {
     }
   }
 
-  @override
-  void dispose() {
-    super.dispose();
-  }
-
   void startTimer() {
     if (!_isPaused)
       timer = Timer(dur, keepRunning);

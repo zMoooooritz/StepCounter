@@ -42,11 +42,11 @@ class _AboutViewState extends State<AboutView> {
             Padding(
               padding: const EdgeInsets.only(top: 10.0, bottom: 20.0, left: 10.0, right: 10.0),
               child: Text(
-                'Dies ist eine App, die für die Earables eSense entwickelt wurde. '
+                'Dies ist eine Flutter App, die für die Earables eSense entwickelt wurde. '
                     + 'Sie liest den Beschleunigungssensor des eSense Earables aus, '
                     + 'um mit dessen Daten die Anzahl der gegangenen Schritte zu '
                     + 'berechnen. Mittels der vom Nutzer angegebenen Schrittweite '
-                    + 'kann damit die zu Fuß zurückgelegte Distanz approximiert werden. '
+                    + 'kann dann die zu Fuß zurückgelegte Distanz approximiert werden. '
                     + 'Damit die Messung erfolgen kann, muss der LINKE Earbud im Ohr '
                     + 'getragen werden, der rechte ist dafür jedoch nicht nötig.',
                 overflow: TextOverflow.ellipsis,
