@@ -107,7 +107,7 @@ class _SettingsViewState extends State<SettingsView> {
                             child: Slider(
                               activeColor: Colors.indigoAccent,
                               min: 0.1,
-                              max: 1.5,
+                              max: 2.0,
                               onChanged: (newStepSize) {
                                 setState(() {
                                   _stepSize = newStepSize;

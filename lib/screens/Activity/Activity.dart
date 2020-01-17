@@ -110,7 +110,7 @@ class _ActivityViewState extends State<ActivityView> {
               + (timePassed.inSeconds % 60).toString().padLeft(2, '0');
 
       _speed = ((_distance / 1000) / (timePassed.inMilliseconds / 3600000));
-      _displaySpeed = "≈ " + _speed.toStringAsFixed(1) + " km/h";
+      _displaySpeed = "≈ " + _speed.toStringAsFixed(1).replaceAll('.', ',') + " km/h";
     });
   }
 
@@ -188,9 +188,9 @@ class _ActivityViewState extends State<ActivityView> {
 
         _distance = _stepSize * _stepCount;
         if (_distance < 1000)
-          _displayDistance = _distance.toStringAsFixed(2) + ' m';
+          _displayDistance = _distance.toStringAsFixed(1).replaceAll('.', ',') + ' m';
         else
-          _displayDistance = (_distance / 1000).toStringAsFixed(2) + ' km';
+          _displayDistance = (_distance / 1000).toStringAsFixed(2).replaceAll('.', ',') + ' km';
       });
     });
   }
